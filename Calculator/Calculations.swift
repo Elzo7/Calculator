@@ -7,11 +7,12 @@
 
 import Foundation
 
-//struct Calculations
-//{
-//    func dodawanie(a:Int,b:Int)->Double
-//    {
-//        return a+b
+struct Calculations
+{
+ // func dodawanie(a:Int,b:Int)->Double
+   // {
+   //     var result:Double = a+b
+ //      return result
 //    }
 //    func odejmowanie(a:Int,b:Int)->Double
 //    {
@@ -31,5 +32,5 @@ import Foundation
    // }
     //func sinus(a:Int)->Double
    // {
-//}
+}
 
