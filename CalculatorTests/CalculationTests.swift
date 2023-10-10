@@ -6,30 +6,76 @@
 //
 
 import XCTest
-
+@testable import Calculator
 final class CalculationTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func testAddition()
+    {
+        var a=13
+        var b=19
+        var result=Calculations().dodawanie(a: a, b: b)
+        XCTAssert(result == 32)
+        a = -2
+        b = 3
+        result=Calculations().dodawanie(a: a, b: b)
+        XCTAssert(result == 1)
+        a = -1
+        b = -1
+        result=Calculations().dodawanie(a: a, b: b)
+        XCTAssert(result == -2)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testSubstractions()
+    {
+        var a=19
+        var b=13
+        var result=Calculations().odejmowanie(a: a, b: b)
+        XCTAssert(result == 6)
+        a = -2
+        b = 3
+        result=Calculations().odejmowanie(a: a, b: b)
+        XCTAssert(result == -5)
+        a = 24
+        b = 16
+        result=Calculations().odejmowanie(a: a, b: b)
+        XCTAssert(result == 8)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testMultiple()
+    {
+        var a=3
+        var b=2
+        var result=Calculations().mnozenie(a: a, b: b)
+        XCTAssert(result == 6)
+        a = -2
+        b = 3
+        result=Calculations().mnozenie(a: a, b: b)
+        XCTAssert(result == -6)
+        a = -1
+        b = -1
+        result=Calculations().mnozenie(a: a, b: b)
+        XCTAssert(result == 1)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testDiv()
+    {
+        var a=8
+        var b=2
+        var result=Calculations().dzielenie(a: a, b: b)
+        XCTAssert(result == 4)
+        a = -4
+        b = 2
+        result=Calculations().dzielenie(a: a, b: b)
+        XCTAssert(result == -2)
+        a = -1
+        b = -1
+        result=Calculations().dzielenie(a: a, b: b)
+        XCTAssert(result == 1)
     }
-
+    func testSin()
+    {
+        var a=0
+        var result = Calculations().sinus(a: a)
+        XCTAssert(result==0)
+    }
+    
 }
+
+
